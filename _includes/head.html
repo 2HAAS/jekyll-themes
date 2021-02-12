@@ -12,7 +12,7 @@
     {%- endif -%}
         {%- assign image = '' -%}
     {%- if page.thumbnail -%}
-        {%- assign image = page.thumbnail -%}
+        {%- assign image = page.thumbnail | prepend: "/thumbnails/" | prepend: site.baseurl | prepend: site.url -%}
     {%- else -%}
         {%- assign image = "/assets/img/blogimage.jpg" | prepend: site.baseurl | prepend: site.url -%}
     {%- endif -%}
