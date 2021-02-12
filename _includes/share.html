@@ -1,0 +1,7 @@
+<h3>Share This page</h3>
+<center>
+  <div class="btnscontainer">
+    <a class="idfb" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.baseurl | prepend: site.url }}{{ page.url }}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="{{ site.translations.button.share_on_facebook | default: 'Share on Facebook' }}">{%- include facebook.html -%}</a>
+    <a class="idtwitter" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;{{ page.description }}&quot;%20{{ site.baseurl | prepend: site.url }}{{ page.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={%- for tag in page.tags -%}{{tag}},{%- endfor -%}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="{{ site.translations.button.share_on_twitter | default: 'Share on Twitter' }}">{%- include twitter.html -%}</a>
+  </div>
+</center>

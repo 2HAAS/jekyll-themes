@@ -1,0 +1,58 @@
+{% assign title = '' %}
+    {%- if page.title -%}
+        {%- assign title = page.title | append: " | " | append: site.name -%}
+    {%- else -%}
+        {%- assign title = site.title -%}
+    {%- endif -%}
+    {%- assign description = '' -%}
+    {%- if page.description -%}
+        {%- assign description = page.description | strip_html | strip_newlines | truncate: 160 -%}
+    {%- else -%}
+        {%- assign description = site.description -%}
+    {%- endif -%}
+<meta charset="UTF-8">
+<title>{{ page.title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ description }}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="{{'/assets/css/2HAAS.css'}}" rel="stylesheet" />
+<link href="{{'/assets/css/syntax.css'}}" rel="stylesheet" />
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="fb:app_id" content="156037212742246">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:url" content="{{ site.baseurl | prepend: site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ image }}"/>
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="article:publisher" content="https://www.facebook.com/2haas" />
+<meta property="article:author" content="https://www.facebook.com/aj.palok5" />
+<meta property="article:published_time" content="{%- if page.date -%}{{ page.date }}{%- else -%}{{ 'now' | date: "%B %d, %Y" }}{%- endif -%}" />
+<meta property="og:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="{%- if page.title -%}{{ page.title }}{%- else -%}{{ site.title }}{%- endif -%}">
+<meta name="twitter:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}">
+<meta name="twitter:site" content="@2haas_tw" /><meta name="twitter:creator" content="@ajpalok_tw"><meta name="twitter:card" content="summary">
+<link rel="shortcut icon" href="{{ site.baseurl | prepend: site.url }}/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="{{ site.url }}/assets/img/icons/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="{{ site.url to}}/assets/img/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ site.baseurl | prepend: site.url }}/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl | prepend: site.url }}/assets/img/icons/favicon-16x16.png">
+<link rel="manifest" href="{{ site.url }}{{ site.baseurl }}/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ site.baseurl | prepend: site.url }}/assets/img/icons/ms-icon-180x180.png">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.url }}" />
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl | prepend: site.url }}/feed.xml"/>

@@ -1,0 +1,23 @@
+title: Jekyll Themes By 2HAAS
+name: Jekyll Themes | 2HAAS
+description: Get The Beautiful Free Templates To Make Your Best Jekyll Websites!
+
+permalink: /themes/:title/
+
+# Advanced Settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://jekyll.2haas.com" # the base hostname & protocol for your site
+
+plugins: [jekyll-paginate]
+
+highlighter: pygments
+paginate: 20
+
+markdown: kramdown
+markdown_ext: "markdown, mkdown, mkdn, mkd, md"
+
+# SASS
+sass:
+  style: compressed
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'vendor']
