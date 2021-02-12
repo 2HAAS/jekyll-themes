@@ -1,4 +1,4 @@
-{% assign title = '' %}
+    {% assign title = '' %}
     {%- if page.title -%}
         {%- assign title = page.title | append: " | " | append: site.name -%}
     {%- else -%}
@@ -10,6 +10,13 @@
     {%- else -%}
         {%- assign description = site.description -%}
     {%- endif -%}
+        {%- assign image = '' -%}
+    {%- if page.image -%}
+        {%- assign image = page.image -%}
+    {%- else -%}
+        {%- assign image = "/assets/img/blogimage.jpg" | prepend: site.baseurl | prepend: site.url -%}
+    {%- endif -%}
+
 <meta charset="UTF-8">
 <title>{{ page.title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
