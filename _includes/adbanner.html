@@ -1,17 +1,21 @@
-          <script type="text/javascript">
-			
-            var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  <script type="text/javascript">
 
-            google_ad_client = "ca-pub-7426762298315186";
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-            if (width > 769) {
-              google_ad_slot = "6552835850";
-              google_ad_width = 728;
-              google_ad_height = 90;
-            } else {
-              var el = document.getElementById("banner72");
-              el.parentNode.removeChild(el);
-            }
- 
-          </script>
-          <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    google_ad_client = "ca-pub-7426762298315186";
+
+    if (width > 769) {
+      google_ad_slot = "9419314230";
+      google_ad_width = 728;
+      google_ad_height = 90;
+    } elseif (width < 769) {
+      google_ad_slot = "9419314230";
+      data-ad-format="auto";
+      data-full-width-responsive="true";
+    } else {
+      var el = document.getElementById("banner72");
+      el.parentNode.removeChild(el);
+    }
+
+  </script>
+  <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
